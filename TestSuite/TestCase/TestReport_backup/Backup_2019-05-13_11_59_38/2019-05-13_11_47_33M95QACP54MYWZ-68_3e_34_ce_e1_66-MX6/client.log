@@ -1,0 +1,12 @@
+2019-05-13 11:47:33,916 - MX6 - INFO - udid: M95QACP54MYWZ-68:3e:34:ce:e1:66-MX6
+2019-05-13 11:47:35,709 - MX6 - INFO - --> DynamicTest.setUpClass
+2019-05-13 11:47:45,958 - MX6 - INFO - <-- DynamicTest.setUpClass, Success
+
+2019-05-13 11:47:45,962 - MX6 - INFO - --> DynamicTest.setUp
+2019-05-13 11:47:47,011 - MX6 - INFO - <-- DynamicTest.setUp, Success
+
+2019-05-13 11:47:47,013 - MX6 - INFO - --> DynamicTest.test_demo
+2019-05-13 11:47:47,013 - MX6 - INFO - 	--> LoginPage.wait_page
+2019-05-13 11:47:50,341 - MX6 - INFO - 	--> LoginPage.input_username
+2019-05-13 11:47:50,701 - MX6 - INFO - 	--> LoginPage.input_password
+2019-05-13 11:47:51,350 - MX6 - INFO - 	--> LoginPage.login_click
