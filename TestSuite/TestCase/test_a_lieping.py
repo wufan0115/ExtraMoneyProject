@@ -39,10 +39,11 @@ class DynamicTest(unittest.TestCase, BasePage):
     def get_post_num(self):
         self.d(text="职位").click()
         for i in self.d.xpath(
-                "//android.view.ViewGroup/android.view.ViewGroup/../android.view.ViewGroup/android.widget.TextView").all():
+                "//android.view.View/android.view.View/../android.view.View/android.widget.TextView").all():
             get_name = i.text
             if "已发布" in get_name:
                 post_num = get_name.split("已发布（")[1].split("）")
+                break
         self.d(resourceId="com.lietou.mishu:id/recruitment_main").click()
         return int(post_num[0])
 
@@ -59,12 +60,12 @@ class DynamicTest(unittest.TestCase, BasePage):
             num = 0
             while num < 10:
                 time.sleep(10)
-                if self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
-                                "/android.widget.ScrollView/android.view.ViewGroup"
-                                "/android.view.ViewGroup").wait(timeout=3):
-                    self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
-                                 "/android.widget.ScrollView/android.view.ViewGroup"
-                                 "/android.view.ViewGroup").click()
+                if self.d.xpath("//android.widget.ScrollView/android.view.View"
+                                "/android.widget.ScrollView/android.view.View"
+                                "/android.view.View").wait(timeout=3):
+                    self.d.xpath("//android.widget.ScrollView/android.view.View"
+                                 "/android.widget.ScrollView/android.view.View"
+                                 "/android.view.View").click()
                     if self.d(text="立即沟通").wait(timeout=2):
                         self.d(text="立即沟通").click()
                         time.sleep(2)
@@ -112,14 +113,14 @@ class DynamicTest(unittest.TestCase, BasePage):
     @testcase
     def test_b_search(self):
         if self.d(className="android.widget.HorizontalScrollView", instance=1).wait(timeout=10):
-            time.sleep(2)
-            self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").click()
+            time.sleep(3)
+            self.d.xpath("//android.view.View/android.widget.ImageView").click()
             self.d(text="已发职位搜索").click()
             for elem in self.d(resourceId="com.lietou.mishu:id/position_item_title"):
                 get_post_name = elem.get_text()
                 elem.click()
                 tmp = 0
-                while tmp < 1:
+                while tmp < 10:
                     time.sleep(10)
                     self.d(resourceId="com.lietou.mishu:id/ll_root").click()
                     if self.d(text="立即沟通").wait(timeout=2):
@@ -156,7 +157,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                         continue
                 self.d(resourceId="com.lietou.mishu:id/search_back").click()
                 time.sleep(2)
-                self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").click()
+                self.d.xpath("//android.view.View/android.widget.ImageView").click()
                 self.d(text="已发职位搜索").click()
 
         else:
