@@ -171,8 +171,6 @@ class DynamicTest(unittest.TestCase, BasePage):
                     if self.d(text="立即沟通").wait(timeout=2):
                         self.d(text="立即沟通").click()
                         time.sleep(2)
-                        self.d(resourceId="com.lietou.mishu:id/rl_multi_and_send").click()
-                        self.d(text="发送职位").click()
                         # 当职位list增多时，需要考虑弹框显示不全的情况，滑动找控件，只执行5次
                         post_num = 0
                         while post_num < 3:
