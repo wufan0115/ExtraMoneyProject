@@ -70,13 +70,13 @@ class DynamicTest(unittest.TestCase, BasePage):
                 while num < 10:
                     time.sleep(10)
                     get_version = self.d.device_info['version']
-                    if get_version < '6.0':
-                        if self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
-                                        "/android.widget.ScrollView/android.view.ViewGroup"
-                                        "/android.view.ViewGroup").wait(timeout=3):
-                            self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
-                                         "/android.widget.ScrollView/android.view.ViewGroup"
-                                         "/android.view.ViewGroup").click()
+                    if get_version < '5.1.1':
+                        if self.d.xpath("//android.widget.ScrollView/android.view.View"
+                                        "/android.widget.ScrollView/android.view.View"
+                                        "/android.view.View").wait(timeout=3):
+                            self.d.xpath("//android.widget.ScrollView/android.view.View"
+                                         "/android.widget.ScrollView/android.view.View"
+                                         "/android.view.View").click()
                     else:
                         if self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
                                         "/android.widget.ScrollView/android.view.ViewGroup"
