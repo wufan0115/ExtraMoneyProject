@@ -38,34 +38,52 @@ class DynamicTest(unittest.TestCase, BasePage):
     # 获取职位数量
     def get_post_num(self):
         self.d(text="职位").click()
-        for i in self.d.xpath(
-                "//android.view.View/android.view.View/../android.view.View/android.widget.TextView").all():
+        get_version = self.d.device_info['version']
+        # 系统版本兼容
+        if get_version < '5.1.1':
+            d = self.d.xpath(
+                "//android.view.View/android.view.View/../android.view.View/android.widget.TextView")
+        else:
+            d = self.d.xpath(
+                "//android.view.ViewGroup/android.view.ViewGroup/../android.view.ViewGroup/android.widget.TextView")
+        for i in d.all():
             get_name = i.text
             if "已发布" in get_name:
                 post_num = get_name.split("已发布（")[1].split("）")
-                break
         self.d(resourceId="com.lietou.mishu:id/recruitment_main").click()
         return int(post_num[0])
 
     @testcase
     def test_a_recommend(self):
-        if LoginPage.LoginPage().wait_page("密码登录"):
-            self.d(text="密码登录").click()
-            self.d.set_fastinput_ime(True)
-            LoginPage.login()
-            self.d.set_fastinput_ime(False)
-        tmp = 0
-        get_num = self.get_post_num()
-        while tmp < get_num:
-            num = 0
-            while num < 10:
-                time.sleep(10)
-                if self.d.xpath("//android.widget.ScrollView/android.view.View"
-                                "/android.widget.ScrollView/android.view.View"
-                                "/android.view.View").wait(timeout=3):
-                    self.d.xpath("//android.widget.ScrollView/android.view.View"
-                                 "/android.widget.ScrollView/android.view.View"
-                                 "/android.view.View").click()
+        if self.d(resourceId="com.lietou.mishu:id/v_hidden"):
+            self.d(resourceId="com.lietou.mishu:id/v_hidden").click()
+        else:
+            if LoginPage.LoginPage().wait_page("密码登录"):
+                self.d(text="密码登录").click()
+                self.d.set_fastinput_ime(True)
+                LoginPage.login()
+                self.d.set_fastinput_ime(False)
+            tmp = 0
+            get_num = self.get_post_num()
+            while tmp < get_num:
+                num = 0
+                while num < 10:
+                    time.sleep(10)
+                    get_version = self.d.device_info['version']
+                    if get_version < '6.0':
+                        if self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
+                                        "/android.widget.ScrollView/android.view.ViewGroup"
+                                        "/android.view.ViewGroup").wait(timeout=3):
+                            self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
+                                         "/android.widget.ScrollView/android.view.ViewGroup"
+                                         "/android.view.ViewGroup").click()
+                    else:
+                        if self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
+                                        "/android.widget.ScrollView/android.view.ViewGroup"
+                                        "/android.view.ViewGroup").wait(timeout=3):
+                            self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
+                                         "/android.widget.ScrollView/android.view.ViewGroup"
+                                         "/android.view.ViewGroup").click()
                     if self.d(text="立即沟通").wait(timeout=2):
                         self.d(text="立即沟通").click()
                         time.sleep(2)
@@ -102,34 +120,64 @@ class DynamicTest(unittest.TestCase, BasePage):
                         self.d.swipe(0.5, 0.8, 0.5, 0.55)
                         num += 1
                         continue
-            self.d.swipe(0.9, 0.5, 0.2, 0.5)
-            tmp += 1
-        # default status
-        back_num = 0
-        while back_num < get_num + 2:
-            self.d.swipe(0.4, 0.5, 0.9, 0.5)
-            back_num += 1
+                self.d.swipe(0.9, 0.5, 0.2, 0.5)
+                tmp += 1
+            # default status
+            back_num = 0
+            while back_num < get_num + 2:
+                self.d.swipe(0.4, 0.5, 0.9, 0.5)
+                back_num += 1
 
     @testcase
     def test_b_search(self):
-        if self.d(className="android.widget.HorizontalScrollView", instance=1).wait(timeout=10):
+        if self.d(className="android.widget.HorizontalScrollView", instance=1).wait(timeout=20):
             time.sleep(3)
-            self.d.xpath("//android.view.View/android.widget.ImageView").click()
-            self.d(text="已发职位搜索").click()
-            for elem in self.d(resourceId="com.lietou.mishu:id/position_item_title"):
-                get_post_name = elem.get_text()
-                elem.click()
+            # 获取设备系统版本
+            get_version = self.d.device_info['version']
+
+            get_num = self.get_post_num()
+            post_list = []
+            for num in range(get_num):
+                if get_version < '5.1.1':
+                    post_location = self.d.xpath("//android.widget.HorizontalScrollView/android.view.View"
+                                                 "/android.view.View/android.view.View[contains(@index, %d)]"
+                                                 "/android.widget.TextView" % num)
+                else:
+                    post_location = self.d.xpath("//android.widget.HorizontalScrollView/android.view.ViewGroup"
+                                                 "/android.view.ViewGroup/android.view.ViewGroup[contains(@index, %d)]"
+                                                 "/android.widget.TextView" % num)
+                post_list.append(str(post_location.get_text()))
+            time.sleep(2)
+
+            # 系统版本兼容
+            if get_version < '5.1.1':
+                self.d.xpath("//android.view.View/android.widget.ImageView").click()
+            else:
+                self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").click()
+
+            for text_name in post_list:
+                self.d(text=text_name).click()
                 tmp = 0
                 while tmp < 10:
                     time.sleep(10)
-                    self.d(resourceId="com.lietou.mishu:id/ll_root").click()
+                    get_version = self.d.device_info['version']
+                    if get_version < '5.1.1':
+                        self.d.xpath("//android.widget.ScrollView/android.view.View"
+                                     "/android.view.View").click()
+                    else:
+                        self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
+                                     "/android.view.ViewGroup").click()
+
                     if self.d(text="立即沟通").wait(timeout=2):
                         self.d(text="立即沟通").click()
+                        time.sleep(2)
+                        self.d(resourceId="com.lietou.mishu:id/rl_multi_and_send").click()
+                        self.d(text="发送职位").click()
                         # 当职位list增多时，需要考虑弹框显示不全的情况，滑动找控件，只执行5次
                         post_num = 0
                         while post_num < 3:
-                            if self.d(text=get_post_name):
-                                self.d(text=get_post_name).click()
+                            if self.d(text=text_name):
+                                self.d(text=text_name).click()
                                 self.d(text="确认").click()
                                 self.d.set_fastinput_ime(False)
                                 self.d(resourceId="com.lietou.mishu:id/rl_input").click()
@@ -142,6 +190,14 @@ class DynamicTest(unittest.TestCase, BasePage):
 
                         self.d(resourceId="com.lietou.mishu:id/chat_left_group").click()
                         self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
+                        self.d(text="清空").click()
+                        self.d(text="取消").click()
+                        time.sleep(2)
+                        # 系统版本兼容
+                        if get_version < '5.1.1':
+                            self.d.xpath("//android.view.View/android.widget.ImageView").click()
+                        else:
+                            self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").click()
                         tmp += 1
                     elif self.d(text="继续沟通"):
                         self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
@@ -155,13 +211,18 @@ class DynamicTest(unittest.TestCase, BasePage):
                         self.d.swipe(0.5, 0.8, 0.5, 0.55)
                         tmp += 1
                         continue
-                self.d(resourceId="com.lietou.mishu:id/search_back").click()
+                self.d(text="取消").click()
                 time.sleep(2)
-                self.d.xpath("//android.view.View/android.widget.ImageView").click()
-                self.d(text="已发职位搜索").click()
+                # 系统版本兼容
+                if get_version < '5.1.1':
+                    self.d.xpath("//android.view.View/android.widget.ImageView").click()
+                else:
+                    self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").click()
 
         else:
-            log.d("未找到")
+            log.i("未找到")
+
+
 
 
 if __name__ == "__main__":
