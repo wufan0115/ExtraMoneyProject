@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="171" column="37" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
+            <state relative-caret-position="-1764">
+              <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -70,8 +70,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="27" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="765" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -193,15 +194,16 @@
       <workItem from="1559034647827" duration="289000" />
       <workItem from="1559372391520" duration="179000" />
       <workItem from="1559472051892" duration="4905000" />
-      <workItem from="1560329099790" duration="5017000" />
+      <workItem from="1560329099790" duration="5660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10390000" />
+    <option name="totallyTimeSpent" value="11033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20243205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -287,8 +289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="171" column="37" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
+        <state relative-caret-position="-1764">
+          <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
         </state>
       </provider>
     </entry>

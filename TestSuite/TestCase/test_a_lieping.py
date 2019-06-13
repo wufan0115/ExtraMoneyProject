@@ -220,7 +220,28 @@ class DynamicTest(unittest.TestCase, BasePage):
         else:
             log.i("未找到")
 
+    @testcase
+    def test_c_message(self):
+        if self.d(className="android.widget.HorizontalScrollView", instance=1).wait(timeout=20):
+            self.d(text="消息").click()
+            message_list = ['可以', '好的', '好', '可以啊']
+            num = 0
+            while num < 5:
+                for elem in self.d(resourceId="com.lietou.mishu:id/tv_content"):
+                    get_message = elem.get_text()
+                    if get_message in message_list:
+                        elem.click()
+                        self.d.set_fastinput_ime(False)
+                        self.d(resourceId="com.lietou.mishu:id/rl_input").click()
+                        self.d(resourceId="com.lietou.mishu:id/et_chat").set_text("那您方便发我一份简历吗？")
+                        self.d(text="发送").click()
+                        self.d(resourceId="com.lietou.mishu:id/chat_left_group").click()
 
+                self.d.swipe(0.5, 0.8, 0.5, 0.3)
+                num += 1
+            self.d(text="推荐").click()
+        else:
+            log.i("未找到")
 
 
 if __name__ == "__main__":
