@@ -98,7 +98,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                                 self.d(text=get_post_name).click()
                                 self.d(text="确认").click()
                                 self.d(resourceId="com.lietou.mishu:id/rl_input").click()
-                                self.d(resourceId="com.lietou.mishu:id/et_chat").set_text("您好，觉得您的经历很匹配，可以把您的简历委托给我吗")
+                                self.d(resourceId="com.lietou.mishu:id/et_chat").set_text("您好，觉得您的经历很匹配，如果感兴趣欢迎应聘该职位，我们可以帮您做内推")
                                 self.d.set_fastinput_ime(False)
                                 self.d(text="发送").click()
                                 break
@@ -180,7 +180,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                                 self.d(text="确认").click()
                                 self.d.set_fastinput_ime(False)
                                 self.d(resourceId="com.lietou.mishu:id/rl_input").click()
-                                self.d(resourceId="com.lietou.mishu:id/et_chat").set_text("您好，觉得您的经历很匹配，可以把您的简历委托给我吗")
+                                self.d(resourceId="com.lietou.mishu:id/et_chat").set_text("您好，觉得您的经历很匹配，如果感兴趣欢迎应聘该职位，我们可以帮您做内推")
                                 self.d(text="发送").click()
                                 break
                             else:
