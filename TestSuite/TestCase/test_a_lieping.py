@@ -47,6 +47,7 @@ class DynamicTest(unittest.TestCase, BasePage):
             d = self.d.xpath(
                 "//android.view.ViewGroup/android.view.ViewGroup/../android.view.ViewGroup/android.widget.TextView")
         for i in d.all():
+            global post_num
             get_name = i.text
             if "已发布" in get_name:
                 post_num = get_name.split("已发布（")[1].split("）")
@@ -84,7 +85,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                             self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
                                          "/android.widget.ScrollView/android.view.ViewGroup"
                                          "/android.view.ViewGroup").click()
-                    if self.d(text="立即沟通").wait(timeout=2):
+                    if self.d(text="立即沟通").wait(timeout=10):
                         self.d(text="立即沟通").click()
                         time.sleep(2)
                         get_post_name = self.d(resourceId="com.lietou.mishu:id/tv_talk_position").get_text()
@@ -168,7 +169,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                         self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
                                      "/android.view.ViewGroup").click()
 
-                    if self.d(text="立即沟通").wait(timeout=2):
+                    if self.d(text="立即沟通").wait(timeout=10):
                         self.d(text="立即沟通").click()
                         time.sleep(2)
                         # 当职位list增多时，需要考虑弹框显示不全的情况，滑动找控件，只执行5次
