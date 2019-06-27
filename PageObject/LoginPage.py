@@ -41,7 +41,7 @@ class LoginPage(BasePage):
 
 
 def login():
-    dict_list = [{'17072563611': '1234Ab'}]
+    dict_list = [{'13059833467': ' zhangzhang123'}, {'13504574013': '67896789'}, {'13846624194': 'hjgst789'}]
     num_list = dict_list[random.randint(0, len(dict_list)) - 1]
     username = list(num_list.keys())[0]
     password = list(num_list.values())[0]
