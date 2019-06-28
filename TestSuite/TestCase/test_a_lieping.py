@@ -74,8 +74,8 @@ class DynamicTest(unittest.TestCase, BasePage):
         get_num = self.get_post_num()
         while tmp < get_num:
             num = 0
-            while num < 10:
-                time.sleep(10)
+            while num < 15:
+                time.sleep(5)
                 get_version = self.d.device_info['version']
                 if get_version < '5.1.1':
                     if self.d.xpath("//android.widget.ScrollView/android.view.View"
@@ -96,21 +96,22 @@ class DynamicTest(unittest.TestCase, BasePage):
                     time.sleep(2)
                     get_post_name = self.d(resourceId="com.lietou.mishu:id/tv_talk_position").get_text()
                     self.d(resourceId="com.lietou.mishu:id/rl_multi_and_send").click()
-                    self.d(text="发送职位").click()
-                    # 当职位list增多时，需要考虑弹框显示不全的情况，滑动找控件，只执行5次
-                    post_num = 0
-                    while post_num < 3:
-                        if self.d(text=get_post_name):
-                            self.d(text=get_post_name).click()
-                            self.d(text="确认").click()
-                            self.d(resourceId="com.lietou.mishu:id/rl_input").click()
-                            self.d(resourceId="com.lietou.mishu:id/et_chat").set_text("您好，觉得您的经历很匹配，如果感兴趣欢迎应聘该职位，我们可以帮您做内推")
-                            self.d.set_fastinput_ime(False)
-                            self.d(text="发送").click()
-                            break
-                        else:
-                            self.d(resourceId="com.lietou.mishu:id/recycler_view").swipe("up")
-                            post_num += 1
+                    if self.d(text="发送职位").wait(timeout=5):
+                        self.d(text="发送职位").click()
+                        # 当职位list增多时，需要考虑弹框显示不全的情况，滑动找控件，只执行5次
+                        post_num = 0
+                        while post_num < 3:
+                            if self.d(text=get_post_name):
+                                self.d(text=get_post_name).click()
+                                self.d(text="确认").click()
+                                self.d(resourceId="com.lietou.mishu:id/rl_input").click()
+                                self.d(resourceId="com.lietou.mishu:id/et_chat").set_text("您好，觉得您的经历很匹配，如果感兴趣先点进我发给您的职位，点击应聘职位，我们这边会跟进帮您做推荐")
+                                self.d.set_fastinput_ime(False)
+                                self.d(text="发送").click()
+                                break
+                            else:
+                                self.d(resourceId="com.lietou.mishu:id/recycler_view").swipe("up")
+                                post_num += 1
 
                     self.d(resourceId="com.lietou.mishu:id/chat_left_group").click()
                     self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
@@ -165,8 +166,8 @@ class DynamicTest(unittest.TestCase, BasePage):
             for text_name in post_list:
                 self.d(text=text_name).click()
                 tmp = 0
-                while tmp < 10:
-                    time.sleep(10)
+                while tmp < 15:
+                    time.sleep(5)
                     get_version = self.d.device_info['version']
                     if get_version < '5.1.1':
                         self.d.xpath("//android.widget.ScrollView/android.view.View"
@@ -186,7 +187,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                                 self.d(text="确认").click()
                                 self.d.set_fastinput_ime(False)
                                 self.d(resourceId="com.lietou.mishu:id/rl_input").click()
-                                self.d(resourceId="com.lietou.mishu:id/et_chat").set_text("您好，觉得您的经历很匹配，如果感兴趣欢迎应聘该职位，我们可以帮您做内推")
+                                self.d(resourceId="com.lietou.mishu:id/et_chat").set_text("您好，觉得您的经历很匹配，如果感兴趣先点进我发给您的职位，点击应聘职位，我们这边会跟进帮您做推荐")
                                 self.d(text="发送").click()
                                 break
                             else:
@@ -195,14 +196,7 @@ class DynamicTest(unittest.TestCase, BasePage):
 
                         self.d(resourceId="com.lietou.mishu:id/chat_left_group").click()
                         self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
-                        self.d(text="清空").click()
-                        self.d(text="取消").click()
-                        time.sleep(2)
-                        # 系统版本兼容
-                        if get_version < '5.1.1':
-                            self.d.xpath("//android.view.View/android.widget.ImageView").click()
-                        else:
-                            self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").click()
+                        self.d.swipe(0.5, 0.8, 0.5, 0.55)
                         tmp += 1
                     elif self.d(text="继续沟通"):
                         self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
@@ -253,6 +247,6 @@ class DynamicTest(unittest.TestCase, BasePage):
 
 if __name__ == "__main__":
     cases = unittest.TestSuite()
-    cases.addTest(DynamicTest('test_a_recommend'))
+    cases.addTest(DynamicTest('test_b_search'))
     Drivers().run(cases)
     # unittest.main()
