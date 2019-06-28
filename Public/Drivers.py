@@ -94,7 +94,7 @@ class Drivers:
         ChromeDriver.kill()
 
         #  Generate statistics report  生成统计测试报告 将所有设备的报告在一个HTML中展示
-        create_statistics_report(runs)
+        # create_statistics_report(runs)
 
 # if __name__ == '__main__':
     # print(ATX_Server(ReadConfig().get_url()).online_devices())
