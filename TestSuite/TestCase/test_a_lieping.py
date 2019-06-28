@@ -38,21 +38,26 @@ class DynamicTest(unittest.TestCase, BasePage):
     # 获取职位数量
     def get_post_num(self):
         self.d(text="职位").click()
-        get_version = self.d.device_info['version']
-        # 系统版本兼容
-        if get_version < '5.1.1':
-            d = self.d.xpath(
-                "//android.view.View/android.view.View/../android.view.View/android.widget.TextView")
+        if self.d(text="刷新职位").wait(timeout=5):
+            get_version = self.d.device_info['version']
+            # 系统版本兼容
+            if get_version < '5.1.1':
+                d = self.d.xpath(
+                    "//android.view.View/android.view.View/../android.view.View/android.widget.TextView")
+            else:
+                d = self.d.xpath(
+                    "//android.view.ViewGroup/android.view.ViewGroup/../android.view.ViewGroup/android.widget.TextView")
+            for i in d.all():
+                global post_num
+                get_name = i.text
+                if "已发布" in get_name:
+                    post_num = get_name.split("已发布（")[1].split("）")
+            self.d(resourceId="com.lietou.mishu:id/recruitment_main").click()
+            return int(post_num[0])
         else:
-            d = self.d.xpath(
-                "//android.view.ViewGroup/android.view.ViewGroup/../android.view.ViewGroup/android.widget.TextView")
-        for i in d.all():
-            global post_num
-            get_name = i.text
-            if "已发布" in get_name:
-                post_num = get_name.split("已发布（")[1].split("）")
-        self.d(resourceId="com.lietou.mishu:id/recruitment_main").click()
-        return int(post_num[0])
+            log.i("跳转 职位异常")
+            return 1
+
 
     @testcase
     def test_a_recommend(self):

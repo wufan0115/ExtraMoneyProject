@@ -1,0 +1,17 @@
+2019-06-27 18:15:58,018 - M2 E - INFO - udid: 741AECQJ25D8H-2c:57:31:16:21:9a-M2_E
+2019-06-27 18:16:00,189 - M2 E - INFO - --> DynamicTest.setUpClass
+2019-06-27 18:16:08,988 - M2 E - INFO - <-- DynamicTest.setUpClass, Success
+
+2019-06-27 18:16:08,991 - M2 E - INFO - --> DynamicTest.setUp
+2019-06-27 18:16:09,900 - M2 E - INFO - <-- DynamicTest.setUp, Success
+
+2019-06-27 18:16:09,901 - M2 E - INFO - --> DynamicTest.test_a_recommend
+2019-06-27 18:16:20,131 - M2 E - INFO - 	--> LoginPage.wait_page
+2019-06-27 18:20:15,582 - M2 E - INFO - <-- DynamicTest.test_a_recommend, Success
+
+2019-06-27 18:20:15,585 - M2 E - INFO - --> DynamicTest.tearDown
+2019-06-27 18:20:16,466 - M2 E - INFO - <-- DynamicTest.tearDown, Success
+
+2019-06-27 18:20:16,467 - M2 E - INFO - --> DynamicTest.tearDownClass
+2019-06-27 18:20:18,229 - M2 E - INFO - <-- DynamicTest.tearDownClass, Success
+
