@@ -134,6 +134,7 @@ class DynamicTest(unittest.TestCase, BasePage):
         back_num = 0
         while back_num < get_num + 2:
             self.d.swipe(0.4, 0.5, 0.9, 0.5)
+            time.sleep(3)
             back_num += 1
 
     @testcase
