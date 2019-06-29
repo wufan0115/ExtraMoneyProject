@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a622ec32-aec1-41f6-b148-7868e70b3a90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/Public/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="134" column="37" lean-forward="true" selection-start-line="134" selection-start-column="37" selection-end-line="134" selection-end-column="37" />
+            <state relative-caret-position="-301">
+              <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
               <folding>
                 <element signature="e#47#72#0" expanded="true" />
               </folding>
@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestSuite/run_cases.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="300">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -142,12 +142,6 @@
               <item name="ExtraMoneyProject" type="462c0819:PsiDirectoryNode" />
               <item name="TestSuite" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ExtraMoneyProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExtraMoneyProject" type="462c0819:PsiDirectoryNode" />
-              <item name="TestSuite" type="462c0819:PsiDirectoryNode" />
-              <item name="TestCase" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -180,7 +174,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_a_lieping">
+  <component name="RunManager" selected="Python.run_cases">
     <configuration name="Devices_new" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ExtraMoneyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -249,8 +243,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_a_lieping" />
         <item itemvalue="Python.run_cases" />
+        <item itemvalue="Python.test_a_lieping" />
         <item itemvalue="Python.Devices_new" />
       </list>
     </recent_temporary>
@@ -271,12 +265,12 @@
       <workItem from="1560329099790" duration="5660000" />
       <workItem from="1560421126297" duration="136000" />
       <workItem from="1560573663736" duration="1926000" />
-      <workItem from="1561546843017" duration="12817000" />
+      <workItem from="1561546843017" duration="14189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25912000" />
+    <option name="totallyTimeSpent" value="27284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -324,8 +318,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ExtraMoneyProject$run_cases.coverage" NAME="run_cases Coverage Results" MODIFIED="1561708972472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/ExtraMoneyProject$test_a_lieping.coverage" NAME="test_a_lieping Coverage Results" MODIFIED="1561720257279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/TestCase" />
+    <SUITE FILE_PATH="coverage/ExtraMoneyProject$run_cases.coverage" NAME="run_cases Coverage Results" MODIFIED="1561783965880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/ExtraMoneyProject$Devices_new.coverage" NAME="Devices_new Coverage Results" MODIFIED="1561547793493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Public" />
   </component>
   <component name="editorHistoryManager">
@@ -425,13 +419,6 @@
         <state relative-caret-position="-6707" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestSuite/run_cases.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Drivers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="982">
@@ -442,10 +429,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TestSuite/run_cases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="134" column="37" lean-forward="true" selection-start-line="134" selection-start-column="37" selection-end-line="134" selection-end-column="37" />
+        <state relative-caret-position="-301">
+          <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
           <folding>
             <element signature="e#47#72#0" expanded="true" />
           </folding>
