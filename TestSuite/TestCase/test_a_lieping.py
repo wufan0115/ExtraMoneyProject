@@ -125,6 +125,10 @@ class DynamicTest(unittest.TestCase, BasePage):
                     self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
                     self.d.swipe(0.5, 0.8, 0.5, 0.55)
                     num += 1
+                elif self.d(text="未审核通过"):
+                    self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
+                    self.d.swipe(0.5, 0.8, 0.5, 0.55)
+                    num += 1
                 else:
                     self.d.swipe(0.5, 0.8, 0.5, 0.55)
                     num += 1
