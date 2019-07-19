@@ -79,18 +79,14 @@ class DynamicTest(unittest.TestCase, BasePage):
                 get_version = self.d.device_info['version']
                 if get_version < '5.1.1':
                     if self.d.xpath("//android.widget.ScrollView/android.view.View"
-                                    "/android.widget.ScrollView/android.view.View"
-                                    "/android.view.View").wait(timeout=3):
+                                    "/android.view.View/android.view.View").wait(timeout=3):
                         self.d.xpath("//android.widget.ScrollView/android.view.View"
-                                     "/android.widget.ScrollView/android.view.View"
-                                     "/android.view.View").click()
+                                     "/android.view.View/android.view.View").click()
                 else:
                     if self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
-                                    "/android.widget.ScrollView/android.view.ViewGroup"
-                                    "/android.view.ViewGroup").wait(timeout=3):
+                                    "/android.view.ViewGroup/android.view.ViewGroup").wait(timeout=3):
                         self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
-                                     "/android.widget.ScrollView/android.view.ViewGroup"
-                                     "/android.view.ViewGroup").click()
+                                     "/android.view.ViewGroup/android.view.ViewGroup").click()
                 if self.d(text="立即沟通").wait(timeout=10):
                     self.d(text="立即沟通").click()
                     time.sleep(2)
