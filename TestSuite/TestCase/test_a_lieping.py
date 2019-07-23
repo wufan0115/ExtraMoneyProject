@@ -74,8 +74,8 @@ class DynamicTest(unittest.TestCase, BasePage):
         get_num = self.get_post_num()
         while tmp < get_num:
             num = 0
-            while num < 15:
-                time.sleep(5)
+            while num < 20:
+                time.sleep(3)
                 get_version = self.d.device_info['version']
                 if get_version < '5.1.1':
                     if self.d.xpath("//android.widget.ScrollView/android.view.View"
@@ -168,8 +168,8 @@ class DynamicTest(unittest.TestCase, BasePage):
             for text_name in post_list:
                 self.d(text=text_name).click()
                 tmp = 0
-                while tmp < 15:
-                    time.sleep(5)
+                while tmp < 20:
+                    time.sleep(3)
                     get_version = self.d.device_info['version']
                     if get_version < '5.1.1':
                         self.d.xpath("//android.widget.ScrollView/android.view.View"
