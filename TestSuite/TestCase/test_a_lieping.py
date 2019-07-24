@@ -249,16 +249,17 @@ class DynamicTest(unittest.TestCase, BasePage):
                         self.d.xpath("//android.view.View/android.widget.ImageView").click()
                     else:
                         self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").click()
-                # 登出账号
-                self.logout()
             else:
-                # 登出账号
-                self.logout()
+                log.d("未找到")
         except EOFError as e:
             log.d(e)
             self.d.press("back")
             self.d.press("back")
             self.d.press("back")
+
+    @testcase
+    def test_c_logout(self):
+        self.logout()
 
 
 if __name__ == "__main__":
