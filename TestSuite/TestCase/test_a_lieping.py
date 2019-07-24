@@ -261,7 +261,6 @@ class DynamicTest(unittest.TestCase, BasePage):
             self.d.press("back")
 
 
-
 if __name__ == "__main__":
     cases = unittest.TestSuite()
     cases.addTest(DynamicTest('test_a_recommend'))

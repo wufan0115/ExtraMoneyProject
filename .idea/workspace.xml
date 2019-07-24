@@ -3,12 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a622ec32-aec1-41f6-b148-7868e70b3a90" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/PageObject/LoginPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObject/LoginPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Public/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/Public/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestSuite/run_cases.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/run_cases.py" afterDir="false" />
+=======
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,11 +20,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2173">
               <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+=======
+      <file leaf-file-name="test_a_lieping.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="89" column="56" selection-start-line="89" selection-start-column="56" selection-end-line="89" selection-end-column="56" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
               <folding>
                 <element signature="e#47#72#0" expanded="true" />
               </folding>
@@ -28,6 +40,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestSuite/run_cases.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,10 +100,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
               <caret line="28" selection-start-line="28" selection-end-line="28" />
+=======
+      <file leaf-file-name="LoginPage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PageObject/LoginPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="738">
+              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/ReportPath.py">
           <provider selected="true" editor-type-id="text-editor" />
@@ -101,15 +122,33 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+=======
+      <file leaf-file-name="Drivers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Drivers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1440">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/HTMLTestReport.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2244">
               <caret line="949" column="21" selection-start-line="949" selection-start-column="21" selection-end-line="949" selection-end-column="21" />
+=======
+      <file leaf-file-name="run_cases.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestSuite/run_cases.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
             </state>
           </provider>
         </entry>
@@ -130,6 +169,15 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
@@ -141,9 +189,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -224,9 +272,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="LoginPage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ExtraMoneyProject" />
@@ -268,9 +313,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="test_a_lieping" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ExtraMoneyProject" />
@@ -290,10 +332,12 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Devices_new" />
+      <item itemvalue="Python.run_cases" />
+      <item itemvalue="Python.test_a_lieping" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.test_a_lieping" />
@@ -330,9 +374,9 @@
     <option name="totallyTimeSpent" value="83437000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="2062" height="1128" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15236051" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -341,23 +385,36 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32289156" />
       <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.27228916" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+=======
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32891566" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32289156" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32885212" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1761477" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3987952" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -367,11 +424,14 @@
           <line>121</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+<<<<<<< HEAD
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/PageObject/LoginPage.py</url>
           <line>56</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+=======
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -382,12 +442,85 @@
     <SUITE FILE_PATH="coverage/ExtraMoneyProject$Devices_new.coverage" NAME="Devices_new Coverage Results" MODIFIED="1561547793493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Public" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="89" column="56" lean-forward="true" selection-start-line="89" selection-start-column="56" selection-end-line="89" selection-end-column="56" />
+          <folding>
+            <element signature="e#47#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageObject/LoginPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Drivers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestSuite/run_cases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2196">
+          <caret line="131" column="21" lean-forward="true" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+          <folding>
+            <element signature="e#47#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PageObject/LoginPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Drivers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestSuite/run_cases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/local/lib/python3.6/dist-packages/selenium/__init__.py" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/selenium/webdriver/__init__.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/multiprocessing/__init__.pyi">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="177">
           <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+=======
+        <state relative-caret-position="155">
+          <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
         </state>
       </provider>
     </entry>
@@ -439,6 +572,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/TestReport/2019-07-18_11_09_49741AECQJ25D8H-2c_57_31_16_21_9a-M2_E/TestReport.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6586" />
@@ -452,6 +586,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/TestReport/2019-07-18_11_49_58741AECQJ25D8H-2c_57_31_16_21_9a-M2_E/TestReport.html">
+=======
+    <entry file="file:///usr/local/Cellar/python3/3.6.2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py" />
+    <entry file="file://$PROJECT_DIR$/Public/Decorator.py">
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7021" />
       </provider>
@@ -468,9 +606,13 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/TestReport/2019-07-19_15_01_12741AECQJ25D8H-2c_57_31_16_21_9a-M2_E/TestReport.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/TestReport/2019-06-27_12_04_28741AECQJ25D8H-2c_57_31_16_21_9a-M2_E/TestReport.html" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
     <entry file="file://$PROJECT_DIR$/Public/Devices_new.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1077">
@@ -500,21 +642,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/Devices.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-474">
           <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
             <element signature="e#74#114#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/Ports.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="330">
           <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="738">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
         </state>
       </provider>
     </entry>
@@ -525,6 +677,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Public/ReportPath.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -539,6 +692,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="95" column="26" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+=======
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/TestReport/2019-06-28_15_29_55741AECQJ25D8H-2c_57_31_16_21_9a-M2_E/TestReport.html" />
+    <entry file="file://$PROJECT_DIR$/Public/Drivers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
           <folding>
             <element signature="e#199#237#0" expanded="true" />
           </folding>
@@ -547,6 +707,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/Test_data.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="390">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
@@ -587,6 +748,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2173">
           <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+=======
+        <state relative-caret-position="360">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestReport/2019-07-01_10_24_4471UBDL623H8W--m1_note/client.log" />
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestReport/2019-07-01_10_24_4471UBDL624G5K-38_bc_1a_d9_e2_1e-m1_note/client.log" />
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestReport/2019-06-30_17_10_5671UBDL624G5K--m1_note/client.log" />
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestReport/2019-07-01_10_24_4471MBDL323A8A--m1_note/TestReport.html" />
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestReport/2019-07-01_10_26_5071UBDL624G5K-38_bc_1a_d9_e2_1e-m1_note/client.log" />
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestReport/2019-06-30_17_10_5671UBDL624G5K--m1_note/TestReport.html" />
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestReport/2019-07-01_10_24_4471MBDL323A8A--m1_note/client.log" />
+    <entry file="file://$PROJECT_DIR$/TestSuite/TestCase/test_a_lieping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="89" column="56" selection-start-line="89" selection-start-column="56" selection-end-line="89" selection-end-column="56" />
+>>>>>>> cd579157d6189c265f6622a6c0c425762b3ae8df
           <folding>
             <element signature="e#47#72#0" expanded="true" />
           </folding>
