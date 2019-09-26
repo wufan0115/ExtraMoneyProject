@@ -75,7 +75,7 @@ class Drivers:
             return
 
         # generate test data data.json 准备测试数据
-        generate_test_data(devices)
+        # generate_test_data(devices)
 
         print('Starting Run test >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
         runs = []

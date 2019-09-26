@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import random
-
+import threading
 from Public.BasePage import BasePage
 from Public.Decorator import *
 from uiautomator2 import UiObjectNotFoundError
@@ -40,17 +40,27 @@ class LoginPage(BasePage):
         self.d(text="退出登录").click()
 
 
+lock = threading.Lock()
+dict_list = ['15143504986:Ab1111', '14702868363:1234565', '13624586924:jhst67890',
+             '17099439121:lili789xiang', '17099439110:jessie689', '18939824530:baobao68028665',
+             '17072569956:joy768', '15134663409:yunyun123', '17099439121:lili789xiang',
+             '17099439171:776788']
+
+
 def login():
-    dict_list = [{'15134670784': 'xh1234567'}, {'15134663409': 'yunyun123'}, {'13846644342': 'huihui809'},
-                 {'13846630749': 'weiwei123'}, {'14702868363': '1234565'}, {'13624586924': 'jhst67890'},
-                 {'13059833467': 'zhangzhang123'}, {'15201351540': 'wu123456'}, {'18518378462': 'lyb007150'}]
-    num_list = dict_list[random.randint(0, len(dict_list)) - 1]
-    username = list(num_list.keys())[0]
-    password = list(num_list.values())[0]
+    global dict_list
+    # 进程锁，设置全局变量，多进程执行时，都从全局变量中获取数据
+    lock.acquire()
+    random_list = dict_list[random.randint(0, len(dict_list)) - 1]
+    # 避免取出账号重复
+    dict_list.remove(random_list)
+    username = random_list.split(":")[0]
+    password = random_list.split(":")[1]
     page = LoginPage()
     page.input_username(username)
     page.input_password(password)
     page.login_click()
+    lock.release()
 
 
 if __name__ == '__main__':
