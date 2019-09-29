@@ -209,7 +209,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                 if self.d(text="我要招人").wait(timeout=5):
                     self.d(text="我要招人").click()
                     self.d(text="完成").click()
-            if self.d(resourceId="com.lietou.mishu:id/myReact").wait(timeout=20):
+            if self.d(resourceId="com.lietou.mishu:id/search").wait(timeout=20):
                 time.sleep(3)
                 # 获取设备系统版本
                 get_version = self.d.device_info['version']
@@ -225,8 +225,8 @@ class DynamicTest(unittest.TestCase, BasePage):
                 # else:
                 #     if self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").wait(timeout=5):
                 #         self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").click()
-                if self.d(resourceId="com.lietou.mishu:id/search_2").wait(timeout=3):
-                    self.d(resourceId="com.lietou.mishu:id/search_2").click()
+                if self.d(resourceId="com.lietou.mishu:id/search").wait(timeout=3):
+                    self.d(resourceId="com.lietou.mishu:id/search").click()
                 for text_name in post_list.keys():
                     if self.d(text="按职位搜索").wait(timeout=3):
                         self.d(text="请输入关键词多个词请用空格隔开").set_text(text_name)
@@ -249,7 +249,15 @@ class DynamicTest(unittest.TestCase, BasePage):
 
                         if self.d(text="立即沟通").wait(timeout=10):
                             self.d(text="立即沟通").click()
+
+                            if self.d(resourceId="com.lietou.mishu:id/header_title").wait(timeout=3):
+                                print(post_list[text_name])
+                                self.d(text=post_list[text_name]).click()
+                                self.d(text="确定").click()
                             time.sleep(2)
+                            self.d(resourceId="com.lietou.mishu:id/rl_multi_and_send").click()
+                            if self.d(text="发送职位").wait(timeout=5):
+                                self.d(text="发送职位").click()
                             # 当职位list增多时，需要考虑弹框显示不全的情况，滑动找控件，只执行5次
                             post_num = 0
                             while post_num < 3:
@@ -318,6 +326,6 @@ class DynamicTest(unittest.TestCase, BasePage):
 
 if __name__ == "__main__":
     cases = unittest.TestSuite()
-    cases.addTest(DynamicTest('test_a_recommend'))
+    cases.addTest(DynamicTest('test_b_search'))
     Drivers().run(cases)
     # unittest.main()
