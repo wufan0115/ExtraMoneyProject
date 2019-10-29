@@ -93,6 +93,9 @@ class DynamicTest(unittest.TestCase, BasePage):
                 self.d.set_fastinput_ime(False)
                 if self.d(resourceId="com.lietou.mishu:id/iv_to_recruit").wait(timeout=5):
                     self.d(resourceId="com.lietou.mishu:id/iv_to_recruit").click()
+                elif self.d(text="我要招人").wait(timeout=3):
+                    self.d(text="我要招人").click()
+                    self.d(text="完成").click()
                 elif self.d(resourceId="com.lietou.mishu:id/iv_close").wait(timeout=3):
                     self.d(resourceId="com.lietou.mishu:id/iv_close").click()
                     if self.d(text="跳过，暂时不想填写").wait(timeout=3):
@@ -101,6 +104,9 @@ class DynamicTest(unittest.TestCase, BasePage):
                             self.d(resourceId="com.lietou.mishu:id/iv_to_recruit").click()
             tmp = 0
             # get_num = self.get_post_num()
+            if self.d(text="请选择性别").wait(timeout=3):
+                self.d(resourceId="com.lietou.mishu:id/select_man").click()
+                self.d(text="确认").click()
             while tmp < 3:
                 num = 0
                 while num < 30:
@@ -121,7 +127,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                                             "/android.view.ViewGroup/android.view.ViewGroup").wait(timeout=3):
                                 self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
                                              "/android.view.ViewGroup/android.view.ViewGroup").click()
-                    if self.d(text="立即沟通").wait(timeout=10):
+                    if self.d(text="立即沟通").wait(timeout=5):
                         self.d(text="立即沟通").click()
                         time.sleep(2)
                         get_post_name = self.d(resourceId="com.lietou.mishu:id/tv_talk_position").get_text()
@@ -167,6 +173,10 @@ class DynamicTest(unittest.TestCase, BasePage):
                         self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
                         self.d.swipe(0.5, 0.8, 0.5, 0.55)
                         num += 1
+                    elif self.d(text="亲~请连接网络～"):
+                        self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
+                        self.d.swipe(0.5, 0.8, 0.5, 0.55)
+                        num += 1
                     else:
                         self.d.swipe(0.5, 0.8, 0.5, 0.55)
                         num += 1
@@ -195,6 +205,9 @@ class DynamicTest(unittest.TestCase, BasePage):
             if self.d(text="您的账号已在其他设备登录，请重新登录").wait(timeout=3):
                 time.sleep(5)
                 self.d(text="确定").click()
+            elif self.d(text="我要招人").wait(timeout=3):
+                self.d(text="我要招人").click()
+                self.d(text="完成").click()
             elif self.d(resourceId="com.lietou.mishu:id/iv_close").wait(timeout=3):
                 self.d(resourceId="com.lietou.mishu:id/iv_close").click()
                 if self.d(text="跳过，暂时不想填写").wait(timeout=3):
@@ -209,6 +222,15 @@ class DynamicTest(unittest.TestCase, BasePage):
                 if self.d(text="我要招人").wait(timeout=5):
                     self.d(text="我要招人").click()
                     self.d(text="完成").click()
+                elif self.d(resourceId="com.lietou.mishu:id/iv_close").wait(timeout=3):
+                    self.d(resourceId="com.lietou.mishu:id/iv_close").click()
+                    if self.d(text="跳过，暂时不想填写").wait(timeout=3):
+                        self.d(text="跳过，暂时不想填写").click()
+                        if self.d(resourceId="com.lietou.mishu:id/rl_resume_root").wait(timeout=10):
+                            self.d(resourceId="com.lietou.mishu:id/iv_to_recruit").click()
+            if self.d(text="请选择性别").wait(timeout=3):
+                self.d(resourceId="com.lietou.mishu:id/select_man").click()
+                self.d(text="确认").click()
             if self.d(resourceId="com.lietou.mishu:id/search").wait(timeout=20):
                 time.sleep(3)
                 # 获取设备系统版本
@@ -237,7 +259,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                             self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
                                          "/android.view.ViewGroup[contains(@index, 0)]").click()
                     tmp = 0
-                    while tmp < 30:
+                    while tmp < 5:
                         time.sleep(3)
                         get_version = self.d.device_info['version']
                         if get_version < '5.1.1':
@@ -247,7 +269,7 @@ class DynamicTest(unittest.TestCase, BasePage):
                             self.d.xpath("//android.widget.ScrollView/android.view.ViewGroup"
                                          "/android.view.ViewGroup").click()
 
-                        if self.d(text="立即沟通").wait(timeout=10):
+                        if self.d(text="立即沟通").wait(timeout=5):
                             self.d(text="立即沟通").click()
 
                             if self.d(resourceId="com.lietou.mishu:id/header_title").wait(timeout=3):
@@ -293,17 +315,18 @@ class DynamicTest(unittest.TestCase, BasePage):
                             self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
                             self.d.swipe(0.5, 0.8, 0.5, 0.55)
                             tmp += 1
+                        elif self.d(text="亲~请连接网络～"):
+                            self.d(resourceId="com.lietou.mishu:id/ib_menu_back").click()
+                            self.d.swipe(0.5, 0.8, 0.5, 0.55)
+                            tmp += 1
                         else:
                             self.d.swipe(0.5, 0.8, 0.5, 0.55)
                             tmp += 1
                             continue
                     self.d(text="取消").click()
                     time.sleep(2)
-                    # 系统版本兼容
-                    if get_version < '5.1.1':
-                        self.d.xpath("//android.view.View/android.widget.ImageView").click()
-                    else:
-                        self.d.xpath("//android.view.ViewGroup/android.widget.ImageView").click()
+                    if self.d(resourceId="com.lietou.mishu:id/search").wait(timeout=3):
+                        self.d(resourceId="com.lietou.mishu:id/search").click()
             else:
                 log.d("未找到")
         except EOFError as e:
@@ -321,6 +344,8 @@ class DynamicTest(unittest.TestCase, BasePage):
             self.logout()
         self.d.swipe(0.2, 0.95, 0.2, 0.3)
         if self.d(resourceId="com.android.systemui:id/clear_all_progress"):
+            self.d(text="清除缓存").click()
+            time.sleep(2)
             self.d(resourceId="com.android.systemui:id/clear_all_progress").click()
 
 
