@@ -107,6 +107,8 @@ class DynamicTest(unittest.TestCase, BasePage):
             if self.d(text="请选择性别").wait(timeout=3):
                 self.d(resourceId="com.lietou.mishu:id/select_man").click()
                 self.d(text="确认").click()
+            elif self.d(text="一键升级").wait(timeout=3):
+                self.d(resourceId="com.lietou.mishu:id/img_close").click()
             while tmp < 3:
                 num = 0
                 while num < 30:
